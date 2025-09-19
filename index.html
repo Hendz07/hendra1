@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Diri + Portofolio Gambar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .biodata-container {
+            background-color: #ffffffcc;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            width: 700px;
+            text-align: center;
+        }
+
+        .biodata-container img.profile {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .biodata-container h2 {
+            margin: 10px 0 5px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .biodata-container p {
+            margin: 6px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #222;
+        }
+
+        /* PORTOFOLIO SECTION */
+        .portfolio-section {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .portfolio-section h3 {
+            font-size: 22px;
+            color: #333;
+            border-bottom: 2px solid #74ebd5;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .portfolio-item {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-caption {
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="biodata-container">
+        <img src="foto.jpg" alt="Foto Diri" class="profile" onerror="this.src='https://via.placeholder.com/150'">
+        <h2>Hendrawan Bagus Saputra</h2>
+        <p><span class="label">Kampus:</span> Telkom University Surabaya</p>
+        <p><span class="label">NIM:</span> 108072500161</p>
+        <p><span class="label">Jurusan:</span> Informatika</p>
+        <p><span class="label">Email:</span> <a href="mailto:Hendraengginering@gmail.com">Hendraengginering@gmail.com</a></p>
+        <p><span class="label">Alamat:</span> Surabaya, Indonesia</p>
+
+        <!-- PORTOFOLIO SECTION -->
+        <div class="portfolio-section">
+            <h3>Portofolio</h3>
+            <div class="portfolio-grid">
+                <!-- ITEM 1 -->
+                <div class="portfolio-item">
+                    <a href="gambar1-besar.jpg" target="_blank">
+                        <img src="gambar1.jpg" alt="Proyek 1">
+                        <div class="portfolio-caption">Poster</div>
+                    </a>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="portfolio-item">
+                    <a href="gambar2-besar.jpg" target="_blank">
+                        <img src="gambar2.jpg" alt="Proyek 2">
+                        <div class="portfolio-caption">Poster</div>
+                    </a>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="portfolio-item">
+                    <a href="gambar3-besar.jpg" target="_blank">
+                        <img src="gambar3.jpg" alt="Proyek 3">
+                        <div class="portfolio-caption">Proses</div>
+                    </a>
+                </div>
+
+                <!-- ITEM 4 - Kalkulator -->
+                <div class="portfolio-item">
+                    <a href="https://hendrawan.github.io/kalkulator-sederhana/" target="_blank">
+                        <img src="gambar4.jpg" alt="Kalkulator">
+                        <div class="portfolio-caption">Kalkulator Sederhana proses</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
